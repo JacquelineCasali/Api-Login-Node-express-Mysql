@@ -2,12 +2,14 @@
 
 Este Projeto com tela de login e Listar Repositorio onde é possivel listar, visualizar, criar, editar, excluir repositorio .
 
+![Video_apilogin](https://github.com/JacquelineCasali/Api-Login-Node-express-Mysql/assets/103325619/1c134f0c-ca3e-4c21-b75c-57144e820d9e)
+
+
  <!-- <p align="center">
   <img src="./pet/public/2023-06-15_205112.jpg" width="600px">
 </p> -->
 
-   <iframe width="560" height="315" src="./server/public/Video_apilogin.gif"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-
+  
 
 ## Repositorio do Projeto
 
