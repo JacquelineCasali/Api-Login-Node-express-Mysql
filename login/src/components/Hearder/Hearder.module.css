@@ -1,0 +1,169 @@
+.header{
+    background-color: gainsboro;
+border-bottom: 2px solid #f44336;
+position: fixed;
+top: 0;
+width: 100%;
+height: 68px;
+display: flex;
+align-items: center;
+justify-content: space-around;
+/* profundidade */
+z-index: 9999;
+
+}
+
+.header span{
+    font-size: 2rem;
+    color: #b71c1c;
+    font-weight: bold;
+    
+ /* margin-right: 650px; */
+
+}
+
+
+  
+  .a:hover {
+    border-bottom: 2px solid #f44336;
+  }
+nav{
+    /* margin-left: 450px; */
+    margin-right: 10px;
+}
+.header .a{
+    color: black;
+    padding-inline: 0.5rem;
+    font-size: 22px;
+    text-decoration: none;
+    /* color: unset */
+
+}
+
+
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+
+}
+
+/* botao */
+.btn {
+    padding: 14px 32px;
+    border: 1px solid #118c4f;
+    background-color:  #118c4f;;
+    color: #fff;
+    border-radius: 24px 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .btn a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    box-shadow: rgb(0 0 0 / 25%) 0px 8px 24px;
+  
+  }
+
+
+  /* .btn:active  {
+  
+    color: black;
+    
+  
+  } */
+  
+
+
+/* responsividade */
+@media (max-width: 480px) {
+    .header span {
+        font-size: 22px;
+ margin-left: 20px;
+ margin-top: 10px;
+ margin-bottom: 10px;
+ text-align: center;
+    }
+    .header a {
+        font-size: 0.95rem;
+        padding-inline: 0.5rem;
+      
+    }
+    .show {
+        width: 50%;
+    }
+    .hamburger{
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    .header span {
+        font-size: 20px;
+ margin-left: 20px;
+ margin-top: 10px;
+ margin-bottom: 10px;
+ text-align: center;
+    }
+    .header a {
+        font-size: 0.75rem;
+    }
+}
+@media screen and (max-width:768px) {
+    
+ 
+    .header {
+        justify-content: space-around;
+      }
+      .header span {
+        font-size: 24px;
+ margin-left: 20px;
+ margin-top: 10px;
+ margin-bottom: 10px;
+ text-align: center;
+
+    }
+    .header a{
+      
+        color: #b71c1c;
+      
+    }
+    
+    .hamburger {
+        display: flex;
+        /* margin-right: 25px; */
+        
+    }
+    /* ocultar  */
+    .menuSandwich{
+        display: none;
+    }
+    .show{
+        display: flex;
+        width: 30%;
+        height: auto;
+        position: absolute;
+        top: 65px;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        padding-inline: 10px;
+        padding-block: 20px;
+        gap: 1rem;
+      
+    }
+
+    @media screen and (max-width: 1200px) {
+        nav {
+          margin-left: 400px;
+        }
+        .header {
+          justify-content: space-around;
+        }
+      }
+}

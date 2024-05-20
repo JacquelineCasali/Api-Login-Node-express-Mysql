@@ -14,13 +14,13 @@ module.exports = {
         
       name: {
         type: Sequelize.STRING,
-        unique:true,
-        allowNull: false,
-        validate:{
-          notEmpty: {
-            msg:"Esse campo não pode ser vazio"
-          },
-        }
+        //unique:true,
+     //   allowNull: false,
+        // validate:{
+        //   notEmpty: {
+        //     msg:"Esse campo não pode ser vazio"
+        //   },
+        // }
       },
       url: {
         type: Sequelize.STRING,

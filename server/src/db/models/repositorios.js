@@ -24,13 +24,13 @@ module.exports = (sequelize, DataTypes) => {
     {
         name: {
         type: DataTypes.STRING,
-        unique:true,
-        allowNull: false,
-        validate: {
-          notEmpty: {
-            msg: "Esse campo não pode ser vazio",
-          },
-        },
+        // unique:true,
+        // allowNull: false,
+        // validate: {
+        //   notEmpty: {
+        //     msg: "Esse campo não pode ser vazio",
+        //   },
+        // },
       },
       url: {
         type: DataTypes.STRING,

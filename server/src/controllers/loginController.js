@@ -6,43 +6,42 @@ const authConfig=require('../db/config/auth')
 const loginController = {
 
   
+
   //cadastrar
   async login(req, res) {
     const { email, password } = req.body;
-    const userAuth = await db.Users.findOne({ where: { email } });
+    const users = await db.Users.findOne({ where: { email } });
 
-    if (!userAuth) {
-      return res.status(422).json({ message: `Email ${email} não encontrado` });
+    if (!users) {
+      return res.status(422).json({message: `Email ${email} não encontrado` });
     }
-    const userSenha = bcrypt.compareHash(password, userAuth.password);
+    const userSenha = bcrypt.compareHash(password, users.password);
 
    if (!userSenha) {
-      return res.status(401).send({ message: `Email ou senha não confere ` });
+      return res.status(401).json({message: `Email ou senha não confere ` });
     }
     //resgatando o id do usuario
-    const{id}=userAuth;
+    const{id}=users;
     //expiresIn:300 expira em 5 minutos
-  const token= jwt.sign({id},authConfig.secret,{expiresIn:300})
-  
- // res.json({auth:true,token})
+  const token= jwt.sign({id},authConfig.secret,{expiresIn:"7d"})
+
+  res.cookie('token',token)
+
      return res.json({
       auth:true,
       // message: 'logado com sucesso',
-      // userAuth:{
-      //   id,email
-      // },
-      token
+      users:{
+         id,email
+       },
+      token,
+      message:'Logado com sucesso'
      }
       
      );
   
   },
 
-  async logout(req, res) {
-    const blacklist=[];
-    blacklist.push(req.headers['x-access-token'])
-    res.end();
-  }
+
 
 };
 module.exports = loginController;

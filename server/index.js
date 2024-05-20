@@ -2,13 +2,14 @@
 const express = require('express');
 const port=process.env.PORT ||  3001;
 const cors = require("cors");
-
+const cookieParser = require('cookie-parser')
 const path=require('path')
 const morgan = require("morgan");
 
 const app = express();
 
 const usersRoutes=require('./src/routes/usersRoutes')
+app.use(cookieParser())
 
 app.use(cors());
 app.use(express.json());

@@ -1,13 +1,14 @@
  const jwt= require('jsonwebtoken')
  const authConfig=require('../db/config/auth')
- 
+ const promisify=require('util')
  //const SECRET='123'
 
  const auth=async(req,res,next)=>{
 
 
+   // const token=req.headers['x-access-token'];
     const token=req.headers['x-access-token'];
-   
+    //authorization
   
 
 
@@ -26,7 +27,6 @@ jwt.verify(token,authConfig.secret,(err,decoded)=>{
 })
 
  }
-
     
 
  module.exports=auth;
