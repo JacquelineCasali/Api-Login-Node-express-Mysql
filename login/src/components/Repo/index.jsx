@@ -22,7 +22,7 @@ export default function Repo() {
     
     e.preventDefault();
     axios
-      .post(`http://localhost:3001/user/${user?.id}/repositorio`, values
+      .post(`https://api-login-node-express-mysql.onrender.com/user/${user?.id}/repositorio`, values
              )
       .then((res) => {
         console.log(res);

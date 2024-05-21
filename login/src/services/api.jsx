@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const api = axios.create({ baseURL: "http://localhost:3001" });
+export const api = axios.create({ baseURL:"https://api-login-node-express-mysql.onrender.com"|| "http://localhost:3001" });
 
 //metodo que cria a sessao do login
 

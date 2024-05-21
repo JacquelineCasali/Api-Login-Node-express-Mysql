@@ -9,31 +9,25 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
- 
+
   const handlLogin = async (e) => {
     try {
-         //não recarrega a pagina
-    e.preventDefault();
-    await login(email, password);
-   
-  } catch (err) {
-    console.error(err);
-    if (err.response) {
-      setMessage(err.response.data.message);
+      //não recarrega a pagina
+      e.preventDefault();
+      await login(email, password);
+    } catch (err) {
+      console.error(err);
+      if (err.response) {
+        setMessage(err.response.data.message);
+      }
     }
-  } 
- 
   };
-
- 
 
   return (
     <>
-     
-
       <TelaLogin>
-      {message ? <h1>{message}</h1> : ""}
-          <form>
+        {message ? <h1>{message}</h1> : ""}
+        <form>
           <h1>Acesse o Sistema</h1>
 
           <Formulario>
